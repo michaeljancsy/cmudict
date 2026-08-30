@@ -89,10 +89,12 @@ is re-derived from `additions.dict` against whatever upstream now says.
 These entries belong upstream, and CMU asks for them. Upstream's cadence is slow
 (one or two merges a year), which is why this fork exists rather than a PR alone.
 A PR should be cut from `master` with **only** the `cmudict.dict` change — not the
-`conjurerhyme/` directory or this file:
+`conjurerhyme/` directory or this file. Taking the file wholesale off the `conjurerhyme`
+branch gives exactly that, since the additions are the only thing that differs:
 
 ```sh
 git checkout -b transplant-noun master
-python3 conjurerhyme/apply-additions.py   # run from a checkout that has the script
-git add cmudict.dict && git commit -m "Add the noun stress for transplant/transplants"
+git checkout conjurerhyme -- cmudict.dict
+git commit -am "Add the noun stress for transplant and transplants"
+git diff master --stat      # should read: 1 file changed, 2 insertions(+)
 ```
