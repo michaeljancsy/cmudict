@@ -1,0 +1,35 @@
+# Entries added by the ConjureRhyme fork, in cmudict.dict's own line format.
+#
+# Full-line comments (like this one) and blank lines are stripped by
+# apply-additions.py. Everything else is copied verbatim, so an entry here is
+# byte-for-byte what lands in cmudict.dict.
+#
+# Rules for adding to this file:
+#
+#   - The base head word must already exist upstream. This file adds
+#     *pronunciations*, not vocabulary; a genuinely missing word is a different
+#     kind of change and wants a different justification.
+#   - Cite the analogous upstream entries that set the pattern. Every addition
+#     here should be defensible as "upstream already does this, one word over".
+#   - Do not reorder. A variant is inserted after the last existing variant of
+#     its base, which is where upstream puts them.
+#
+# ---------------------------------------------------------------------------
+# transplant: the noun is missing
+#
+# Upstream has only the verb, tranSPLANT (T R AE0 N S P L AE1 N T). English
+# stress-shifts this Latinate trans- family between verb and noun, and upstream
+# already records both halves for the two closest analogues:
+#
+#     transfer     T R AE0 N S F ER1        transport     T R AE0 N S P AO1 R T
+#     transfer(2)  T R AE1 N S F ER0        transport(2)  T R AE1 N S P AO0 R T
+#     transfers    T R AE0 N S F ER1 Z      transports    T R AE0 N S P AO1 R T S
+#     transfers(2) T R AE1 N S F ER0 Z      transports(2) T R AE1 N S P AO0 R T S
+#
+# The noun is the commoner sense by far ("marrow transplant", "heart
+# transplant"), and with only the verb recorded those phrases come out as
+# 1001 rather than 1010. The two lines below are the transfer/transport
+# template applied to transplant, and the plural carries the variant for the
+# same reason transports(2) does.
+transplant(2) T R AE1 N S P L AE0 N T
+transplants(2) T R AE1 N S P L AE0 N T S
